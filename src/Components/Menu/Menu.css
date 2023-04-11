@@ -16,6 +16,8 @@
     min-width: 280px;
 }
 
+
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .menu::-webkit-scrollbar {
     display: none;
