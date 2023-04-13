@@ -5,13 +5,16 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Redirect,
+  Navigate,
 } from "react-router-dom";
 import Menu from "./Components/Menu/Menu";
 import HeaderBlock from "./Components/Header/HeaderBlock";
 import Login from "./Components/Login/Login";
+import { useSelector } from 'react-redux'
+import { selectUser } from './features/userSlice'
 
 function App() {
+  const user = useSelector(selectUser)
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -30,7 +33,8 @@ function App() {
           />
           <Route path="/login" element={
             <>
-            <Login/>
+            {user ? <Navigate replace to='/teslaaccount'/> : <Login />},
+            <Login />
             </>
           }/>
         </Routes>
