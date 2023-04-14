@@ -51,3 +51,24 @@
 .header__link--hidden{
     visibility: hidden;
 }
+
+@media (max-width:1100px) {
+    .header__links{
+        gap:12px;
+        margin-left: -80px;
+    }
+
+    .header__links > a, .header__right > a {
+        font-size: 13px;
+    }
+}
+
+@media (max-width:900px) {
+    .header__links{
+        gap: 8px;
+    }
+
+    .header__right{
+        gap:8px;
+    }
+}
